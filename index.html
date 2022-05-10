@@ -1,0 +1,98 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <title>Table</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <link rel="stylesheet" href="css/style.css">
+    <script src="http://ajax.googleapis.com/ajax/libs/jquery/2.0.0/jquery.min.js"></script>
+</head>
+<body>
+    <section class="ftco-section">
+        <div class="container">
+            <div class="row justify-content-center">
+                <div class="col-md-6 text-center mb-5">
+                    <h2 class="heading-section">Table</h2>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-md-12">
+                    <div class="table-wrap">
+                    <table class="table" id="mytable" >
+                        <thead class="thead-primary">
+                            <tr>
+                                <th>#</th>
+                                <th>Student</th>
+                                <th>Maths</th>
+                                <th>English</th>
+                                <th>Science</th>
+                                <th>History</th>
+                            </tr>
+                        </thead>
+                    <tbody>
+                    <tr>
+                        <th scope="row">1</th>
+                        <td>Siddhant Zinzuwadiya</td>
+                        <td>67</td>
+                        <td>70</td>
+                        <td>49</td>
+                        <td>51</td>
+                    </tr>
+                    <tr>
+                        <th scope="row">2</th>
+                        <td>Nirav Panchal</td>
+                        <td>55</td>
+                        <td>71</td>
+                        <td>23</td>
+                        <td>67</td>
+                    </tr>
+                        <tr>
+                        <th scope="row">3</th>
+                        <td>Manav Suthar</td>
+                        <td>87</td>
+                        <td>45</td>
+                        <td>87</td>
+                        <td>29</td>
+                    </tr>
+                    <tr>
+                    <th scope="row">4</th>
+                    <td>Shubh Thakkar</td>
+                    <td>44</td>
+                    <td>71</td>
+                    <td>74</td>
+                    <td>55</td>
+                </tr>
+                    <tr>
+                    <th scope="row">5</th>
+                    <td>Smit Patel</td>
+                    <td>23</td>
+                    <td>35</td>
+                    <td>66</td>
+                    <td>30</td>
+                </tr>
+                    </tbody>
+                    </table>
+                    <script>
+                        $('#mytable tr td').each(function(){
+                          var cellValue = $(this).html();
+                          if(!isNaN(parseFloat(cellValue))) {
+                            if(cellValue >=50){
+                             $(this).css('background-color','lightgreen');
+                             }
+                            if (cellValue <=50) {
+                              $(this).css('background-color','yellow');
+                            }
+                                 if(cellValue <=30){
+                             $(this).css('background-color','red');
+                             }
+                           
+                          }
+                        });
+                        </script>
+                </div>
+            </div>
+        </div>
+</div>
+</section>
+</body>
+</html>
